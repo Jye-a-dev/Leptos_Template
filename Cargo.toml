@@ -1,0 +1,20 @@
+[package]
+name = "leptos_template"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+gloo-net = "0.8.0"
+leptos = { version = "0.8.23", features = ["csr"] }
+leptos_meta = "0.8.7"
+leptos_router = "0.8.17"
+lucide-leptos = { version = "3.63.0", features = ["home", "layout", "design", "development", "notifications", "arrows"] }
+serde = { version = "1.0.229", features = ["derive"] }
+tw_merge = "0.1.22"
+validator = { version = "0.21.0", features = ["derive"] }
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
